@@ -3,6 +3,7 @@
 <head>
 <title>B Mart</title>
 <link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
 </head>
 
 <body>
@@ -13,14 +14,82 @@
 <a href="index.html">Home</a>
 <a href="shop.html">Shop</a>
 <a href="cart.html">Cart</a>
+<a href="track.html">Track Order</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
 </header>
 
+<!-- HERO SECTION -->
 <div class="hero">
 <h1>Groceries Delivered in Minutes ⚡</h1>
-<p>Fresh groceries at your doorstep</p>
-<a href="shop.html"><button>Shop Now</button></a>
+<p>Fresh groceries, snacks & essentials at your doorstep</p>
+<a href="shop.html"><button>Start Shopping</button></a>
 </div>
+
+<!-- CATEGORIES -->
+<div class="container">
+<h2>Shop by Category 🛒</h2>
+
+<div class="grid">
+
+<div class="product">
+<img src="https://source.unsplash.com/200x200/?fruits">
+<h3>Fruits</h3>
+</div>
+
+<div class="product">
+<img src="https://source.unsplash.com/200x200/?vegetables">
+<h3>Vegetables</h3>
+</div>
+
+<div class="product">
+<img src="https://source.unsplash.com/200x200/?dairy">
+<h3>Dairy</h3>
+</div>
+
+<div class="product">
+<img src="https://source.unsplash.com/200x200/?snacks">
+<h3>Snacks</h3>
+</div>
+
+</div>
+</div>
+
+<!-- FEATURED PRODUCTS -->
+<div class="container">
+<h2>Popular Products 🔥</h2>
+
+<div class="grid">
+
+<div class="product">
+<img src="https://source.unsplash.com/200x200/?milk">
+<h3>Milk</h3>
+<p>₹50</p>
+<button onclick="addToCart('Milk',50)">Add</button>
+</div>
+
+<div class="product">
+<img src="https://source.unsplash.com/200x200/?bread">
+<h3>Bread</h3>
+<p>₹30</p>
+<button onclick="addToCart('Bread',30)">Add</button>
+</div>
+
+<div class="product">
+<img src="https://source.unsplash.com/200x200/?eggs">
+<h3>Eggs</h3>
+<p>₹80</p>
+<button onclick="addToCart('Eggs',80)">Add</button>
+</div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#0a8754; color:white; text-align:center; padding:15px;">
+<p>© 2026 B Mart | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
