@@ -56,10 +56,12 @@ function checkout(){
 // 📦 PLACE ORDER (MOVE CART → ORDERS)
 async function placeOrder(){
     let name = document.getElementById('name').value;
+    let phone = document.getElementById('phone').value;
     let address = document.getElementById('address').value;
+    let error = document.getElementById('error');
 
-    if(name=="" || address==""){
-        alert("Fill all details");
+    if(name=="" || phone=="" || address==""){
+        error.innerText = "Please fill all details";
         return;
     }
 
@@ -72,6 +74,7 @@ async function placeOrder(){
 
     const orderRef = await addDoc(collection(db, "orders"), {
         name,
+        phone,
         address,
         items,
         status: "Processing"
@@ -82,11 +85,13 @@ async function placeOrder(){
         await deleteDoc(doc(db, "cart", docSnap.id));
     });
 
-    // SAVE ORDER ID FOR TRACKING PAGE
+    // SAVE ORDER ID
     localStorage.setItem("lastOrderId", orderRef.id);
 
     window.location = "order.html";
 }
+
+ 
 
 // 📍 TRACK ORDER (REAL)
 async function trackOrder(){
