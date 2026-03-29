@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Track Order</title>
+<title>Track Order - B Mart</title>
 <link rel="stylesheet" href="style.css">
 <script type="module" src="app.js"></script>
 </head>
 
 <body>
 
-<div class="container card">
-<h2>Track Order</h2>
+<header>
+<div class="logo">B Mart</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="cart.html">Cart</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
 
-<input placeholder="Order ID"><br><br>
+<div class="container">
+
+<div class="card">
+<h2>Track Your Order 📦</h2>
+
+<input id="orderId" placeholder="Enter Order ID"><br><br>
 <button onclick="trackOrder()">Track</button>
 
-<p id="status"></p>
+<p id="status" style="font-weight:bold; margin-top:10px;"></p>
+
+<!-- PROGRESS BAR -->
+<div id="progress" style="margin-top:20px;"></div>
 
 </div>
+
+</div>
+
+<script>
+// AUTO FILL LAST ORDER ID
+let lastId = localStorage.getItem("lastOrderId");
+if(lastId){
+    document.getElementById("orderId").value = lastId;
+}
+</script>
 
 </body>
 </html>
