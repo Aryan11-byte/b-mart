@@ -15,6 +15,8 @@ async function addToCart(name, price){
 // 🛒 DISPLAY CART (FROM FIREBASE)
 async function displayCart(){
     let div = document.getElementById('cartItems');
+    let emptyMsg = document.getElementById('emptyMsg');
+
     if(!div) return;
 
     const snapshot = await getDocs(collection(db, "cart"));
@@ -22,16 +24,30 @@ async function displayCart(){
     let total = 0;
     div.innerHTML = "";
 
+    if(snapshot.empty){
+        emptyMsg.style.display = "block";
+        return;
+    } else {
+        emptyMsg.style.display = "none";
+    }
+
     snapshot.forEach(docSnap=>{
         let item = docSnap.data();
         total += item.price;
 
-        div.innerHTML += `<p>${item.name} - ₹${item.price}</p>`;
+        div.innerHTML += `
+        <p>
+            ${item.name} - ₹${item.price}
+            <button onclick="removeItem('${docSnap.id}')">❌</button>
+        </p>
+        `;
     });
 
     div.innerHTML += `<h3>Total: ₹${total}</h3>`;
+}window.removeItem = async function(id){
+    await deleteDoc(doc(db, "cart", id));
+    displayCart();
 }
-
 // ➡️ GO TO CHECKOUT
 function checkout(){
     window.location = "checkout.html";
