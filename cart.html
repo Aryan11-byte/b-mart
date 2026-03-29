@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cart</title>
+<title>Cart - B Mart</title>
 <link rel="stylesheet" href="style.css">
 <script type="module" src="app.js"></script>
 </head>
@@ -10,13 +10,28 @@
 
 <header>
 <div class="logo">B Mart</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="track.html">Track Order</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
-<div class="container card">
-<h2>Your Cart</h2>
+<div class="container">
+<div class="card">
+
+<h2>Your Cart 🛒</h2>
+
 <div id="cartItems"></div>
+
+<p id="emptyMsg" style="display:none;">Your cart is empty 😢</p>
+
 <br>
-<button onclick="checkout()">Checkout</button>
+
+<button onclick="checkout()">Proceed to Checkout</button>
+
+</div>
 </div>
 
 </body>
