@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Order Placed</title>
+<title>Order Confirmed - B Mart</title>
 <link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
 </head>
 
 <body>
 
-<div class="container card">
+<header>
+<div class="logo">B Mart</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="track.html">Track Order</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="container">
+<div class="card" style="text-align:center;">
+
 <h2>🎉 Order Confirmed!</h2>
-<p>Your order has been placed successfully</p>
-<a href="track.html"><button>Track Order</button></a>
+
+<p>Your order has been placed successfully ✅</p>
+
+<p><b>Order ID:</b></p>
+<h3 id="orderId" style="color:#0a8754;"></h3>
+
+<br>
+
+<a href="track.html"><button>Track Order 📦</button></a>
+<br><br>
+<a href="shop.html"><button>Shop More 🛒</button></a>
+
 </div>
+</div>
+
+<script>
+/* SHOW ORDER ID */
+let id = localStorage.getItem("lastOrderId");
+
+if(id){
+    document.getElementById("orderId").innerText = id;
+}else{
+    document.getElementById("orderId").innerText = "Not Found";
+}
+</script>
 
 </body>
 </html>
