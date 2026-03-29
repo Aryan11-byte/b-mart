@@ -95,27 +95,41 @@ async function placeOrder(){
 
 // 📍 TRACK ORDER (REAL)
 async function trackOrder(){
-    let input = document.getElementById("orderId");
-    let id = input.value || localStorage.getItem("lastOrderId");
+    let id = document.getElementById("orderId").value;
+    let statusText = document.getElementById("status");
+    let progressDiv = document.getElementById("progress");
 
     if(!id){
-        document.getElementById("status").innerText = "Enter Order ID";
+        statusText.innerText = "Please enter Order ID";
         return;
     }
 
     try{
         const snap = await getDoc(doc(db, "orders", id));
 
-        if(snap.exists()){
-            document.getElementById("status").innerText = snap.data().status;
-        } else {
-            document.getElementById("status").innerText = "Order not found";
+        if(!snap.exists()){
+            statusText.innerText = "Order not found ❌";
+            return;
         }
+
+        let status = snap.data().status;
+        statusText.innerText = "Status: " + status;
+
+        // PROGRESS UI
+        if(status === "Processing"){
+            progressDiv.innerHTML = "🟡 Processing your order";
+        }
+        else if(status === "Out for Delivery"){
+            progressDiv.innerHTML = "🚚 Out for delivery";
+        }
+        else if(status === "Delivered"){
+            progressDiv.innerHTML = "✅ Delivered successfully";
+        }
+
     }catch{
-        document.getElementById("status").innerText = "Invalid ID";
+        statusText.innerText = "Invalid Order ID";
     }
 }
-
 // 🔄 LOAD CART ON PAGE
 window.onload = displayCart;
 
