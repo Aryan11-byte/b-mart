@@ -1,7 +1,5 @@
-import { 
-    db, collection, addDoc, getDocs, doc, deleteDoc, getDoc 
-} from "./firebase.js";
-
+import { db, collection, addDoc, getDocs, doc, deleteDoc } from "./firebase.js";
+import { getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 // 🛒 ADD TO CART (FIREBASE)
 async function addToCart(name, price){
     await addDoc(collection(db, "cart"), {
