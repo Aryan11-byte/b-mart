@@ -138,3 +138,4 @@ window.addToCart = addToCart;
 window.checkout = checkout;
 window.placeOrder = placeOrder;
 window.trackOrder = trackOrder;
+window.removeItem = removeItem;
