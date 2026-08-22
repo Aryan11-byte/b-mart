@@ -1,100 +1,1113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>B Mart</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
 
-<!-- ✅ Favicon fix -->
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2331/2331970.png">
+    <!-- =========================
+         BASIC SEO
+    ========================== -->
+    <title>Nandaboi — Official Creator Website</title>
 
-<!-- ✅ IMPORTANT: module script -->
-<script type="module" src="app.js"></script>
+    <meta name="description"
+          content="Official website of Nandaboi — creator, entertainer and YouTuber. Discover videos, latest content, creator information and official links.">
+
+    <meta name="keywords"
+          content="Nandaboi, Nanda Boi, Nandaboi YouTube, Nandaboi official, YouTuber, creator, comedy, entertainment">
+
+    <meta name="author" content="Nandaboi">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Social sharing -->
+    <meta property="og:title" content="Nandaboi — Official Creator Website">
+    <meta property="og:description"
+          content="The official home of Nandaboi. Videos, creator information and official links.">
+    <meta property="og:type" content="website">
+
+    <!-- =========================
+         CREATOR / ENTITY DATA
+         Helps search engines understand
+         that this website represents Nandaboi.
+    ========================== -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nandaboi",
+      "url": "https://www.youtube.com/@nandaboi",
+      "sameAs": [
+        "https://www.youtube.com/@nandaboi"
+      ],
+      "jobTitle": "Content Creator",
+      "description": "Nandaboi is a YouTube content creator and entertainer."
+    }
+    </script>
+
+    <!-- =========================
+         FONTS
+    ========================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #070707;
+            color: #f5f3ee;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(
+                circle,
+                rgba(190,160,90,0.10),
+                transparent 65%
+            );
+            top: -250px;
+            right: -200px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(
+                circle,
+                rgba(255,255,255,0.035),
+                transparent 70%
+            );
+            bottom: -250px;
+            left: -200px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            background: rgba(7,7,7,0.78);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: "Manrope", sans-serif;
+            font-size: 23px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #c7ad6a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            color: #aaa;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-button {
+            padding: 11px 19px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .nav-button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            padding: 170px 8% 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 950px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50px;
+            color: #aaa;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            background: #c7ad6a;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(199,173,106,0.8);
+        }
+
+        .hero h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(65px, 12vw, 150px);
+            line-height: 0.85;
+            letter-spacing: -7px;
+            font-weight: 800;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 span {
+            color: #c7ad6a;
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin: auto;
+            color: #999;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .primary-button {
+            background: #f5f3ee;
+            color: #080808;
+            padding: 15px 27px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,255,255,0.12);
+        }
+
+        .secondary-button {
+            border: 1px solid rgba(255,255,255,0.16);
+            padding: 15px 27px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .secondary-button:hover {
+            border-color: #c7ad6a;
+            color: #c7ad6a;
+        }
+
+        /* =========================
+           SCROLL INDICATOR
+        ========================== */
+
+        .scroll {
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #555;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           GENERAL SECTION
+        ========================== */
+
+        section {
+            padding: 120px 8%;
+        }
+
+        .section-label {
+            color: #c7ad6a;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+        }
+
+        .section-title {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(36px, 5vw, 65px);
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: #888;
+            max-width: 600px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0;
+        }
+
+        .stat {
+            padding: 45px 30px;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: "Manrope", sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            color: #777;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 7px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .creator-photo {
+            width: 100%;
+            max-width: 460px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: block;
+            background:
+                linear-gradient(
+                    135deg,
+                    #171717,
+                    #0b0b0b
+                );
+        }
+
+        .photo-container {
+            position: relative;
+        }
+
+        .photo-container::after {
+            content: "NANDABOI";
+            position: absolute;
+            bottom: -18px;
+            right: 25px;
+            color: #c7ad6a;
+            font-size: 11px;
+            letter-spacing: 4px;
+        }
+
+        .about-text p {
+            color: #999;
+            line-height: 1.9;
+            margin-top: 25px;
+            font-size: 15px;
+        }
+
+        /* =========================
+           VIDEOS
+        ========================== */
+
+        .video-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .video-card {
+            background: #0e0e0e;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.35s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(199,173,106,0.4);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            background: #151515;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        .gallery {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: 0.4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.025);
+        }
+
+        /* =========================
+           SOCIAL
+        ========================== */
+
+        .social-section {
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 45px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            min-width: 150px;
+            padding: 17px 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: #f5f3ee;
+            color: #000;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            background: linear-gradient(
+                135deg,
+                #111,
+                #0b0b0b
+            );
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 28px;
+            padding: 80px 30px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            letter-spacing: -3px;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: #777;
+            max-width: 500px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 40px 8%;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #555;
+            font-size: 12px;
+        }
+
+        .footer-logo {
+            font-size: 18px;
+            font-weight: 800;
+            color: #eee;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media(max-width: 850px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            section {
+                padding: 90px 6%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .creator-photo {
+                max-width: 100%;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<header>
-<div class="logo">B Mart</div>
+<!-- =========================
+     NAVIGATION
+========================== -->
+
 <nav>
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="cart.html">Cart</a>
-<a href="track.html">Track Order</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+
+    <a href="#" class="logo">
+        NANDA<span>BOI</span>
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#videos">Videos</a>
+
+        <a href="#gallery">Gallery</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+    <a
+        href="https://www.youtube.com/@nandaboi"
+        target="_blank"
+        class="nav-button">
+
+        YouTube ↗
+
+    </a>
+
 </nav>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            Official Creator Website
+
+        </div>
+
+
+        <h1>
+            NANDA<span>BOI</span>
+        </h1>
+
+
+        <p>
+            Creator. Entertainer. Storyteller.
+            Welcome to the official home of Nandaboi —
+            where ideas turn into videos and entertainment
+            becomes unforgettable.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://www.youtube.com/@nandaboi"
+                target="_blank"
+                class="primary-button">
+
+                Watch on YouTube ↗
+
+            </a>
+
+
+            <a
+                href="#about"
+                class="secondary-button">
+
+                Explore
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll">
+        Scroll to explore
+    </div>
+
 </header>
 
-<!-- HERO -->
-<div class="hero">
-<h1>Groceries Delivered in Minutes ⚡</h1>
-<p>Fresh groceries, snacks & essentials at your doorstep</p>
-<a href="shop.html"><button>Start Shopping</button></a>
-</div>
 
-<!-- CATEGORIES -->
-<div class="container">
-<h2>Shop by Category 🛒</h2>
+<!-- =========================
+     STATS
+========================== -->
 
-<div class="grid">
+<section class="stats">
 
-<div class="product">
-<img src="https://source.unsplash.com/200x200/?fruits">
-<h3>Fruits</h3>
-</div>
+    <div class="stat">
 
-<div class="product">
-<img src="https://source.unsplash.com/200x200/?vegetables">
-<h3>Vegetables</h3>
-</div>
+        <div class="stat-number">
+            60K+
+        </div>
 
-<div class="product">
-<img src="https://source.unsplash.com/200x200/?dairy">
-<h3>Dairy</h3>
-</div>
+        <div class="stat-label">
+            YouTube Community
+        </div>
 
-<div class="product">
-<img src="https://source.unsplash.com/200x200/?snacks">
-<h3>Snacks</h3>
-</div>
+    </div>
 
-</div>
-</div>
 
-<!-- PRODUCTS -->
-<div class="container">
-<h2>Popular Products 🔥</h2>
+    <div class="stat">
 
-<div class="grid">
+        <div class="stat-number">
+            NANDA
+        </div>
 
-<div class="product">
-<img src="https://source.unsplash.com/200x200/?milk">
-<h3>Milk</h3>
-<p>₹50</p>
-<button onclick="addToCart('Milk',50)">Add to Cart</button>
-</div>
+        <div class="stat-label">
+            Creator
+        </div>
 
-<div class="product">
-<img src="https://source.unsplash.com/200x200/?bread">
-<h3>Bread</h3>
-<p>₹30</p>
-<button onclick="addToCart('Bread',30)">Add to Cart</button>
-</div>
+    </div>
 
-<div class="product">
-<img src="https://source.unsplash.com/200x200/?eggs">
-<h3>Eggs</h3>
-<p>₹80</p>
-<button onclick="addToCart('Eggs',80)">Add to Cart</button>
-</div>
 
-</div>
-</div>
+    <div class="stat">
 
-<!-- FOOTER -->
+        <div class="stat-number">
+            100%
+        </div>
+
+        <div class="stat-label">
+            Original Energy
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+    <div class="about-grid">
+
+        <div class="photo-container">
+
+            <!--
+            IMPORTANT:
+            Put your real creator photo in the same folder
+            as this index.html and name it:
+
+            nandaboi.jpg
+
+            OR change the filename below.
+            -->
+
+            <img
+                src="nandaboi.jpg"
+                alt="Nandaboi official creator portrait"
+                class="creator-photo">
+
+        </div>
+
+
+        <div class="about-text">
+
+            <div class="section-label">
+                About
+            </div>
+
+            <h2 class="section-title">
+                Meet<br>
+                Nandaboi.
+            </h2>
+
+            <p>
+                Nandaboi is a digital creator focused on
+                entertainment, comedy, ideas and memorable
+                internet content.
+            </p>
+
+            <p>
+                This is the official destination for Nandaboi —
+                a place to discover the latest videos, creator
+                updates and official social channels.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VIDEOS
+========================== -->
+
+<section id="videos">
+
+    <div class="section-label">
+        Watch
+    </div>
+
+    <h2 class="section-title">
+        Latest Videos.
+    </h2>
+
+    <p class="section-description">
+        Watch Nandaboi's latest content directly on YouTube.
+    </p>
+
+
+    <div class="video-grid">
+
+
+        <!-- VIDEO 1 -->
+
+        <a
+            href="https://www.youtube.com/@nandaboi"
+            target="_blank"
+            class="video-card">
+
+            <div class="video-thumbnail"></div>
+
+            <div class="video-info">
+
+                <h3>
+                    Watch the latest video
+                </h3>
+
+                <p>
+                    Open Nandaboi on YouTube ↗
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- VIDEO 2 -->
+
+        <a
+            href="https://www.youtube.com/@nandaboi"
+            target="_blank"
+            class="video-card">
+
+            <div class="video-thumbnail"></div>
+
+            <div class="video-info">
+
+                <h3>
+                    Explore the channel
+                </h3>
+
+                <p>
+                    Discover more Nandaboi content ↗
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- VIDEO 3 -->
+
+        <a
+            href="https://www.youtube.com/@nandaboi"
+            target="_blank"
+            class="video-card">
+
+            <div class="video-thumbnail"></div>
+
+            <div class="video-info">
+
+                <h3>
+                    More from Nandaboi
+                </h3>
+
+                <p>
+                    Watch on YouTube ↗
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHOTO GALLERY
+========================== -->
+
+<section id="gallery">
+
+    <div class="section-label">
+        Visuals
+    </div>
+
+    <h2 class="section-title">
+        The Creator.
+    </h2>
+
+    <p class="section-description">
+        Official Nandaboi photographs and creator visuals.
+    </p>
+
+
+    <div class="gallery">
+
+
+        <!--
+        Replace these filenames with your actual photos.
+
+        Example:
+        photo1.jpg
+        photo2.jpg
+        photo3.jpg
+        photo4.jpg
+        -->
+
+        <img
+            src="photo1.jpg"
+            alt="Nandaboi official photograph">
+
+        <img
+            src="photo2.jpg"
+            alt="Nandaboi creator photograph">
+
+        <img
+            src="photo3.jpg"
+            alt="Nandaboi YouTube creator">
+
+        <img
+            src="photo4.jpg"
+            alt="Nandaboi official creator image">
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOCIAL
+========================== -->
+
+<section class="social-section">
+
+    <div class="section-label">
+        Official
+    </div>
+
+    <h2 class="section-title">
+        Find Nandaboi.
+    </h2>
+
+    <p class="section-description"
+       style="margin:auto;">
+
+        Follow the official Nandaboi presence online.
+
+    </p>
+
+
+    <div class="social-links">
+
+
+        <a
+            href="https://www.youtube.com/@nandaboi"
+            target="_blank"
+            class="social-link">
+
+            YouTube ↗
+
+        </a>
+
+
+        <!--
+        Add Instagram once you find your official account.
+
+        Example:
+
+        <a href="https://instagram.com/YOURUSERNAME"
+           target="_blank"
+           class="social-link">
+
+           Instagram ↗
+
+        </a>
+        -->
+
+
+        <a
+            href="#contact"
+            class="social-link">
+
+            Business ↓
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact">
+
+    <div class="contact-box">
+
+        <div class="section-label">
+            Business
+        </div>
+
+        <h2>
+            Let's work<br>
+            together.
+        </h2>
+
+        <p>
+            For brand collaborations, partnerships,
+            business enquiries and creator opportunities,
+            get in touch with Nandaboi.
+        </p>
+
+
+        <!--
+        REPLACE THIS WITH YOUR REAL BUSINESS EMAIL
+
+        Example:
+
+        <a href="mailto:business@nandaboi.com"
+           class="primary-button"
+           style="display:inline-block;margin-top:30px;">
+
+           Contact Nandaboi
+
+        </a>
+        -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
 <footer>
-<p>© 2026 B Mart | All Rights Reserved</p>
+
+    <div class="footer-logo">
+        NANDA<span style="color:#c7ad6a;">BOI</span>
+    </div>
+
+    <div>
+        © 2026 Nandaboi. All rights reserved.
+    </div>
+
+    <div>
+        Official Creator Website
+    </div>
+
 </footer>
+
 
 </body>
 </html>
