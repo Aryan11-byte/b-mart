@@ -3,32 +3,26 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- =========================
-         BASIC SEO
-    ========================== -->
     <title>Nandaboi — Official Creator Website</title>
 
     <meta name="description"
-          content="Official website of Nandaboi — creator, entertainer and YouTuber. Discover videos, latest content, creator information and official links.">
+          content="Official website of Nandaboi — YouTube creator and entertainer. Watch videos, discover creator content and follow Nandaboi on YouTube and Instagram.">
 
     <meta name="keywords"
-          content="Nandaboi, Nanda Boi, Nandaboi YouTube, Nandaboi official, YouTuber, creator, comedy, entertainment">
+          content="Nandaboi, Nandaboi YouTube, Nandaboi Instagram, Nandaboi official, YouTuber, creator, entertainment">
 
     <meta name="author" content="Nandaboi">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Social sharing -->
     <meta property="og:title" content="Nandaboi — Official Creator Website">
     <meta property="og:description"
-          content="The official home of Nandaboi. Videos, creator information and official links.">
+          content="The official home of Nandaboi — creator, entertainer and YouTuber.">
     <meta property="og:type" content="website">
 
     <!-- =========================
-         CREATOR / ENTITY DATA
-         Helps search engines understand
-         that this website represents Nandaboi.
+         GOOGLE / SEARCH ENGINE
+         CREATOR INFORMATION
     ========================== -->
 
     <script type="application/ld+json">
@@ -38,12 +32,14 @@
       "name": "Nandaboi",
       "url": "https://www.youtube.com/@nandaboi",
       "sameAs": [
-        "https://www.youtube.com/@nandaboi"
+        "https://www.youtube.com/@nandaboi",
+        "https://www.instagram.com/nandaboi11"
       ],
       "jobTitle": "Content Creator",
       "description": "Nandaboi is a YouTube content creator and entertainer."
     }
     </script>
+
 
     <!-- =========================
          FONTS
@@ -54,6 +50,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet">
+
 
     <style>
 
@@ -83,6 +80,7 @@
             text-decoration: none;
         }
 
+
         /* =========================
            BACKGROUND
         ========================== */
@@ -90,34 +88,47 @@
         body::before {
             content: "";
             position: fixed;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(
-                circle,
-                rgba(190,160,90,0.10),
-                transparent 65%
-            );
-            top: -250px;
-            right: -200px;
+
+            width: 650px;
+            height: 650px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(190,160,90,0.11),
+                    transparent 65%
+                );
+
+            top: -300px;
+            right: -250px;
+
             pointer-events: none;
+
             z-index: -1;
         }
 
         body::after {
             content: "";
             position: fixed;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(
-                circle,
-                rgba(255,255,255,0.035),
-                transparent 70%
-            );
-            bottom: -250px;
-            left: -200px;
+
+            width: 600px;
+            height: 600px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,0.035),
+                    transparent 70%
+                );
+
+            bottom: -300px;
+            left: -250px;
+
             pointer-events: none;
+
             z-index: -1;
         }
+
 
         /* =========================
            NAVBAR
@@ -125,25 +136,36 @@
 
         nav {
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
             height: 78px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             padding: 0 6%;
+
             background: rgba(7,7,7,0.78);
+
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.07);
+
             z-index: 1000;
         }
 
         .logo {
             font-family: "Manrope", sans-serif;
+
             font-size: 23px;
             font-weight: 800;
+
             letter-spacing: -1px;
         }
 
@@ -160,6 +182,7 @@
         .nav-links a {
             font-size: 13px;
             color: #aaa;
+
             transition: 0.3s;
         }
 
@@ -169,9 +192,14 @@
 
         .nav-button {
             padding: 11px 19px;
-            border: 1px solid rgba(255,255,255,0.2);
+
+            border:
+                1px solid rgba(255,255,255,0.2);
+
             border-radius: 30px;
+
             font-size: 13px;
+
             transition: 0.3s;
         }
 
@@ -180,17 +208,23 @@
             color: #000;
         }
 
+
         /* =========================
            HERO
         ========================== */
 
         .hero {
             min-height: 100vh;
-            padding: 170px 8% 100px;
+
+            padding:
+                170px 8% 100px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             position: relative;
         }
 
@@ -200,32 +234,52 @@
 
         .eyebrow {
             display: inline-flex;
+
             align-items: center;
             gap: 9px;
+
             padding: 8px 15px;
-            border: 1px solid rgba(255,255,255,0.12);
+
+            border:
+                1px solid rgba(255,255,255,0.12);
+
             border-radius: 50px;
+
             color: #aaa;
+
             font-size: 11px;
+
             letter-spacing: 1.5px;
+
             text-transform: uppercase;
+
             margin-bottom: 28px;
         }
 
         .eyebrow-dot {
             width: 6px;
             height: 6px;
+
             background: #c7ad6a;
+
             border-radius: 50%;
-            box-shadow: 0 0 12px rgba(199,173,106,0.8);
+
+            box-shadow:
+                0 0 12px rgba(199,173,106,0.8);
         }
 
         .hero h1 {
             font-family: "Manrope", sans-serif;
-            font-size: clamp(65px, 12vw, 150px);
+
+            font-size:
+                clamp(65px, 12vw, 150px);
+
             line-height: 0.85;
+
             letter-spacing: -7px;
+
             font-weight: 800;
+
             margin-bottom: 32px;
         }
 
@@ -235,66 +289,99 @@
 
         .hero p {
             max-width: 620px;
+
             margin: auto;
+
             color: #999;
+
             line-height: 1.8;
+
             font-size: 16px;
         }
 
         .hero-buttons {
             display: flex;
+
             justify-content: center;
+
             gap: 14px;
+
             margin-top: 40px;
+
             flex-wrap: wrap;
         }
 
         .primary-button {
             background: #f5f3ee;
+
             color: #080808;
+
             padding: 15px 27px;
+
             border-radius: 50px;
+
             font-weight: 700;
+
             font-size: 13px;
+
             transition: 0.3s;
         }
 
         .primary-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,255,255,0.12);
+
+            box-shadow:
+                0 15px 40px rgba(255,255,255,0.12);
         }
 
         .secondary-button {
-            border: 1px solid rgba(255,255,255,0.16);
+            border:
+                1px solid rgba(255,255,255,0.16);
+
             padding: 15px 27px;
+
             border-radius: 50px;
+
             font-weight: 600;
+
             font-size: 13px;
+
             transition: 0.3s;
         }
 
         .secondary-button:hover {
             border-color: #c7ad6a;
+
             color: #c7ad6a;
         }
 
+
         /* =========================
-           SCROLL INDICATOR
+           SCROLL
         ========================== */
 
         .scroll {
             position: absolute;
+
             bottom: 35px;
+
             left: 50%;
-            transform: translateX(-50%);
+
+            transform:
+                translateX(-50%);
+
             color: #555;
+
             font-size: 10px;
+
             letter-spacing: 3px;
+
             text-transform: uppercase;
         }
 
+
         /* =========================
-           GENERAL SECTION
+           SECTIONS
         ========================== */
 
         section {
@@ -303,43 +390,66 @@
 
         .section-label {
             color: #c7ad6a;
+
             font-size: 11px;
+
             letter-spacing: 3px;
+
             text-transform: uppercase;
+
             margin-bottom: 17px;
         }
 
         .section-title {
             font-family: "Manrope", sans-serif;
-            font-size: clamp(36px, 5vw, 65px);
+
+            font-size:
+                clamp(36px, 5vw, 65px);
+
             letter-spacing: -3px;
+
             line-height: 1;
+
             margin-bottom: 20px;
         }
 
         .section-description {
             color: #888;
+
             max-width: 600px;
+
             line-height: 1.8;
+
             font-size: 15px;
         }
+
 
         /* =========================
            STATS
         ========================== */
 
         .stats {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             padding: 0;
         }
 
         .stat {
             padding: 45px 30px;
+
             text-align: center;
-            border-right: 1px solid rgba(255,255,255,0.08);
+
+            border-right:
+                1px solid rgba(255,255,255,0.08);
         }
 
         .stat:last-child {
@@ -348,17 +458,24 @@
 
         .stat-number {
             font-family: "Manrope", sans-serif;
+
             font-size: 40px;
+
             font-weight: 800;
         }
 
         .stat-label {
             color: #777;
+
             font-size: 11px;
+
             text-transform: uppercase;
+
             letter-spacing: 2px;
+
             margin-top: 7px;
         }
+
 
         /* =========================
            ABOUT
@@ -366,19 +483,31 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
             gap: 90px;
+
             align-items: center;
         }
 
         .creator-photo {
             width: 100%;
+
             max-width: 460px;
+
             aspect-ratio: 1 / 1;
+
             object-fit: cover;
+
             border-radius: 24px;
-            border: 1px solid rgba(255,255,255,0.1);
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+
             display: block;
+
             background:
                 linear-gradient(
                     135deg,
@@ -393,20 +522,30 @@
 
         .photo-container::after {
             content: "NANDABOI";
+
             position: absolute;
+
             bottom: -18px;
+
             right: 25px;
+
             color: #c7ad6a;
+
             font-size: 11px;
+
             letter-spacing: 4px;
         }
 
         .about-text p {
             color: #999;
+
             line-height: 1.9;
+
             margin-top: 25px;
+
             font-size: 15px;
         }
+
 
         /* =========================
            VIDEOS
@@ -414,29 +553,82 @@
 
         .video-grid {
             margin-top: 50px;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 22px;
         }
 
         .video-card {
             background: #0e0e0e;
-            border: 1px solid rgba(255,255,255,0.07);
+
+            border:
+                1px solid rgba(255,255,255,0.07);
+
             border-radius: 18px;
+
             overflow: hidden;
+
             transition: 0.35s;
         }
 
         .video-card:hover {
-            transform: translateY(-7px);
-            border-color: rgba(199,173,106,0.4);
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(199,173,106,0.4);
         }
 
         .video-thumbnail {
             width: 100%;
+
             aspect-ratio: 16/9;
+
             object-fit: cover;
-            background: #151515;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #181818,
+                    #0c0c0c
+                );
+
+            position: relative;
+        }
+
+        .video-thumbnail::after {
+            content: "▶";
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.09);
+
+            border:
+                1px solid rgba(255,255,255,0.2);
+
+            color: white;
+
+            font-size: 17px;
         }
 
         .video-info {
@@ -445,13 +637,16 @@
 
         .video-info h3 {
             font-size: 16px;
+
             margin-bottom: 8px;
         }
 
         .video-info p {
             color: #666;
+
             font-size: 12px;
         }
+
 
         /* =========================
            GALLERY
@@ -459,23 +654,35 @@
 
         .gallery {
             margin-top: 50px;
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 14px;
         }
 
         .gallery img {
             width: 100%;
+
             aspect-ratio: 1/1;
+
             object-fit: cover;
+
             border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.08);
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
             transition: 0.4s;
         }
 
         .gallery img:hover {
-            transform: scale(1.025);
+            transform:
+                scale(1.025);
         }
+
 
         /* =========================
            SOCIAL
@@ -487,55 +694,81 @@
 
         .social-links {
             margin-top: 45px;
+
             display: flex;
+
             justify-content: center;
+
             gap: 14px;
+
             flex-wrap: wrap;
         }
 
         .social-link {
-            min-width: 150px;
+            min-width: 160px;
+
             padding: 17px 25px;
-            border: 1px solid rgba(255,255,255,0.1);
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+
             border-radius: 50px;
+
             font-size: 13px;
+
             transition: 0.3s;
         }
 
         .social-link:hover {
             background: #f5f3ee;
+
             color: #000;
         }
+
 
         /* =========================
            CONTACT
         ========================== */
 
         .contact-box {
-            background: linear-gradient(
-                135deg,
-                #111,
-                #0b0b0b
-            );
-            border: 1px solid rgba(255,255,255,0.08);
+            background:
+                linear-gradient(
+                    135deg,
+                    #111,
+                    #0b0b0b
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
             border-radius: 28px;
+
             padding: 80px 30px;
+
             text-align: center;
         }
 
         .contact-box h2 {
             font-family: "Manrope", sans-serif;
-            font-size: clamp(40px, 6vw, 70px);
+
+            font-size:
+                clamp(40px, 6vw, 70px);
+
             letter-spacing: -3px;
+
             margin-bottom: 20px;
         }
 
         .contact-box p {
             color: #777;
+
             max-width: 500px;
+
             margin: auto;
+
             line-height: 1.8;
         }
+
 
         /* =========================
            FOOTER
@@ -543,19 +776,29 @@
 
         footer {
             padding: 40px 8%;
-            border-top: 1px solid rgba(255,255,255,0.08);
+
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             color: #555;
+
             font-size: 12px;
         }
 
         .footer-logo {
             font-size: 18px;
+
             font-weight: 800;
+
             color: #eee;
         }
+
 
         /* =========================
            MOBILE
@@ -586,6 +829,7 @@
 
             .about-grid {
                 grid-template-columns: 1fr;
+
                 gap: 50px;
             }
 
@@ -598,7 +842,8 @@
             }
 
             .gallery {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .stats {
@@ -607,7 +852,9 @@
 
             .stat {
                 border-right: none;
-                border-bottom: 1px solid rgba(255,255,255,0.08);
+
+                border-bottom:
+                    1px solid rgba(255,255,255,0.08);
             }
 
             .stat:last-child {
@@ -616,16 +863,20 @@
 
             footer {
                 flex-direction: column;
+
                 gap: 15px;
+
                 text-align: center;
             }
         }
 
     </style>
+
 </head>
 
 
 <body>
+
 
 <!-- =========================
      NAVIGATION
@@ -637,21 +888,36 @@
         NANDA<span>BOI</span>
     </a>
 
+
     <div class="nav-links">
 
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-        <a href="#videos">Videos</a>
+        <a href="#videos">
+            Videos
+        </a>
 
-        <a href="#gallery">Gallery</a>
+        <a href="#gallery">
+            Gallery
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#social">
+            Social
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
 
     </div>
+
 
     <a
         href="https://www.youtube.com/@nandaboi"
         target="_blank"
+        rel="noopener noreferrer"
         class="nav-button">
 
         YouTube ↗
@@ -661,6 +927,7 @@
 </nav>
 
 
+
 <!-- =========================
      HERO
 ========================== -->
@@ -668,6 +935,7 @@
 <header class="hero">
 
     <div class="hero-content">
+
 
         <div class="eyebrow">
 
@@ -684,18 +952,23 @@
 
 
         <p>
+
             Creator. Entertainer. Storyteller.
+
             Welcome to the official home of Nandaboi —
             where ideas turn into videos and entertainment
             becomes unforgettable.
+
         </p>
 
 
         <div class="hero-buttons">
 
+
             <a
                 href="https://www.youtube.com/@nandaboi"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="primary-button">
 
                 Watch on YouTube ↗
@@ -704,12 +977,15 @@
 
 
             <a
-                href="#about"
+                href="https://www.instagram.com/nandaboi11"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="secondary-button">
 
-                Explore
+                Instagram ↗
 
             </a>
+
 
         </div>
 
@@ -723,11 +999,13 @@
 </header>
 
 
+
 <!-- =========================
      STATS
 ========================== -->
 
 <section class="stats">
+
 
     <div class="stat">
 
@@ -745,7 +1023,7 @@
     <div class="stat">
 
         <div class="stat-number">
-            NANDA
+            NANDABOI
         </div>
 
         <div class="stat-label">
@@ -767,7 +1045,9 @@
 
     </div>
 
+
 </section>
+
 
 
 <!-- =========================
@@ -776,56 +1056,78 @@
 
 <section id="about">
 
+
     <div class="about-grid">
+
 
         <div class="photo-container">
 
+
             <!--
+            ==========================================
             IMPORTANT:
-            Put your real creator photo in the same folder
-            as this index.html and name it:
+
+            Put your main photo in the same folder
+            as this index.html.
+
+            Name it:
 
             nandaboi.jpg
 
-            OR change the filename below.
+            ==========================================
             -->
+
 
             <img
                 src="nandaboi.jpg"
                 alt="Nandaboi official creator portrait"
                 class="creator-photo">
 
+
         </div>
 
 
         <div class="about-text">
 
+
             <div class="section-label">
                 About
             </div>
 
+
             <h2 class="section-title">
+
                 Meet<br>
                 Nandaboi.
+
             </h2>
 
+
             <p>
+
                 Nandaboi is a digital creator focused on
                 entertainment, comedy, ideas and memorable
                 internet content.
+
             </p>
+
 
             <p>
+
                 This is the official destination for Nandaboi —
-                a place to discover the latest videos, creator
-                updates and official social channels.
+                a place to discover videos, creator updates
+                and official social channels.
+
             </p>
 
+
         </div>
+
 
     </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -834,78 +1136,92 @@
 
 <section id="videos">
 
+
     <div class="section-label">
         Watch
     </div>
+
 
     <h2 class="section-title">
         Latest Videos.
     </h2>
 
+
     <p class="section-description">
-        Watch Nandaboi's latest content directly on YouTube.
+
+        Watch Nandaboi's latest content directly
+        on the official YouTube channel.
+
     </p>
+
 
 
     <div class="video-grid">
 
 
-        <!-- VIDEO 1 -->
-
         <a
             href="https://www.youtube.com/@nandaboi"
             target="_blank"
+            rel="noopener noreferrer"
             class="video-card">
 
+
             <div class="video-thumbnail"></div>
+
 
             <div class="video-info">
 
                 <h3>
-                    Watch the latest video
+                    Latest Nandaboi Video
                 </h3>
 
                 <p>
-                    Open Nandaboi on YouTube ↗
+                    Watch on YouTube ↗
                 </p>
 
             </div>
 
+
         </a>
 
 
-        <!-- VIDEO 2 -->
 
         <a
             href="https://www.youtube.com/@nandaboi"
             target="_blank"
+            rel="noopener noreferrer"
             class="video-card">
 
+
             <div class="video-thumbnail"></div>
+
 
             <div class="video-info">
 
                 <h3>
-                    Explore the channel
+                    Explore the Channel
                 </h3>
 
                 <p>
-                    Discover more Nandaboi content ↗
+                    Discover more content ↗
                 </p>
 
             </div>
 
+
         </a>
 
 
-        <!-- VIDEO 3 -->
 
         <a
             href="https://www.youtube.com/@nandaboi"
             target="_blank"
+            rel="noopener noreferrer"
             class="video-card">
 
+
             <div class="video-thumbnail"></div>
+
 
             <div class="video-info">
 
@@ -914,10 +1230,11 @@
                 </h3>
 
                 <p>
-                    Watch on YouTube ↗
+                    Open YouTube ↗
                 </p>
 
             </div>
+
 
         </a>
 
@@ -927,22 +1244,28 @@
 </section>
 
 
+
 <!-- =========================
-     PHOTO GALLERY
+     GALLERY
 ========================== -->
 
 <section id="gallery">
+
 
     <div class="section-label">
         Visuals
     </div>
 
+
     <h2 class="section-title">
         The Creator.
     </h2>
 
+
     <p class="section-description">
+
         Official Nandaboi photographs and creator visuals.
+
     </p>
 
 
@@ -950,26 +1273,29 @@
 
 
         <!--
-        Replace these filenames with your actual photos.
+        Replace these with your actual photos.
 
-        Example:
         photo1.jpg
         photo2.jpg
         photo3.jpg
         photo4.jpg
         -->
 
+
         <img
             src="photo1.jpg"
             alt="Nandaboi official photograph">
+
 
         <img
             src="photo2.jpg"
             alt="Nandaboi creator photograph">
 
+
         <img
             src="photo3.jpg"
-            alt="Nandaboi YouTube creator">
+            alt="Nandaboi YouTube creator photograph">
+
 
         <img
             src="photo4.jpg"
@@ -981,24 +1307,32 @@
 </section>
 
 
+
 <!-- =========================
      SOCIAL
 ========================== -->
 
-<section class="social-section">
+<section
+    id="social"
+    class="social-section">
+
 
     <div class="section-label">
         Official
     </div>
 
+
     <h2 class="section-title">
         Find Nandaboi.
     </h2>
 
-    <p class="section-description"
-       style="margin:auto;">
 
-        Follow the official Nandaboi presence online.
+    <p
+        class="section-description"
+        style="margin:auto;">
+
+        Follow Nandaboi through the official
+        social channels.
 
     </p>
 
@@ -1006,9 +1340,12 @@
     <div class="social-links">
 
 
+        <!-- YOUTUBE -->
+
         <a
             href="https://www.youtube.com/@nandaboi"
             target="_blank"
+            rel="noopener noreferrer"
             class="social-link">
 
             YouTube ↗
@@ -1016,20 +1353,20 @@
         </a>
 
 
-        <!--
-        Add Instagram once you find your official account.
+        <!-- INSTAGRAM -->
 
-        Example:
+        <a
+            href="https://www.instagram.com/nandaboi11"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link">
 
-        <a href="https://instagram.com/YOURUSERNAME"
-           target="_blank"
-           class="social-link">
-
-           Instagram ↗
+            Instagram ↗
 
         </a>
-        -->
 
+
+        <!-- BUSINESS -->
 
         <a
             href="#contact"
@@ -1045,47 +1382,62 @@
 </section>
 
 
+
 <!-- =========================
      CONTACT
 ========================== -->
 
 <section id="contact">
 
+
     <div class="contact-box">
+
 
         <div class="section-label">
             Business
         </div>
 
+
         <h2>
+
             Let's work<br>
             together.
+
         </h2>
 
+
         <p>
+
             For brand collaborations, partnerships,
             business enquiries and creator opportunities,
             get in touch with Nandaboi.
+
         </p>
 
 
         <!--
-        REPLACE THIS WITH YOUR REAL BUSINESS EMAIL
+        ==========================================
+        ADD YOUR BUSINESS EMAIL HERE
 
         Example:
 
-        <a href="mailto:business@nandaboi.com"
-           class="primary-button"
-           style="display:inline-block;margin-top:30px;">
+        <a
+          href="mailto:business@nandaboi.com"
+          class="primary-button"
+          style="display:inline-block;margin-top:30px;">
 
-           Contact Nandaboi
+          Contact Nandaboi
 
         </a>
+
+        ==========================================
         -->
+
 
     </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1094,17 +1446,31 @@
 
 <footer>
 
+
     <div class="footer-logo">
-        NANDA<span style="color:#c7ad6a;">BOI</span>
+
+        NANDA
+        <span style="color:#c7ad6a;">
+            BOI
+        </span>
+
     </div>
 
-    <div>
-        © 2026 Nandaboi. All rights reserved.
-    </div>
 
     <div>
+
+        © 2026 Nandaboi.
+        All rights reserved.
+
+    </div>
+
+
+    <div>
+
         Official Creator Website
+
     </div>
+
 
 </footer>
 
